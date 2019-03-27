@@ -53,6 +53,14 @@ var payment =
 	defaultFormat = /(\d{1,4})/g;
 
 	cards = [
+	    {
+			type: 'troy',
+			pattern: /^(?:9792|65\d{2}|36|2205)\d{12}$/,
+			format: defaultFormat,
+			length: [16],
+			cvcLength: [4],
+			luhn: true
+		},
 	  {
 	    type: 'amex',
 	    pattern: /^3[47]/,
