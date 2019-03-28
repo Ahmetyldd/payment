@@ -4,108 +4,116 @@ defaultFormat = /(\d{1,4})/g
 
 cards = [
   {
-      type: 'amex'
-      pattern: /^3[47]/
-      format: /(\d{1,4})(\d{1,6})?(\d{1,5})?/
-      length: [15]
-      cvcLength: [4]
-      luhn: true
+    type: 'troy',
+    pattern: /^(?:9792|65\d{2}|36|2205)\d{12}$/,
+    format: defaultFormat,
+    length: [16],
+    cvcLength: [4],
+    luhn: true
+  },
+  {
+    type: 'amex'
+    pattern: /^3[47]/
+    format: /(\d{1,4})(\d{1,6})?(\d{1,5})?/
+    length: [15]
+    cvcLength: [4]
+    luhn: true
   }
   {
-      type: 'dankort',
-      pattern: /^5019/,
-      format: defaultFormat,
-      length: [16],
-      cvcLength: [3],
-      luhn: true
+    type: 'dankort',
+    pattern: /^5019/,
+    format: defaultFormat,
+    length: [16],
+    cvcLength: [3],
+    luhn: true
   }
   {
-      type: 'hipercard',
-      pattern: /^(384100|384140|384160|606282|637095|637568|60(?!11))/,
-      format: defaultFormat,
-      length: [14..19],
-      cvcLength: [3],
-      luhn: true
+    type: 'hipercard',
+    pattern: /^(384100|384140|384160|606282|637095|637568|60(?!11))/,
+    format: defaultFormat,
+    length: [14..19],
+    cvcLength: [3],
+    luhn: true
   }
   {
-      type: 'dinersclub'
-      pattern: /^(36|38|30[0-5])/
-      format: /(\d{1,4})(\d{1,6})?(\d{1,4})?/
-      length: [14]
-      cvcLength: [3]
-      luhn: true
+    type: 'dinersclub'
+    pattern: /^(36|38|30[0-5])/
+    format: /(\d{1,4})(\d{1,6})?(\d{1,4})?/
+    length: [14]
+    cvcLength: [3]
+    luhn: true
   }
   {
-      type: 'discover'
-      pattern: /^(6011|65|64[4-9]|622)/
-      format: defaultFormat
-      length: [16]
-      cvcLength: [3]
-      luhn: true
+    type: 'discover'
+    pattern: /^(6011|65|64[4-9]|622)/
+    format: defaultFormat
+    length: [16]
+    cvcLength: [3]
+    luhn: true
   }
   {
-      type: 'jcb'
-      pattern: /^35/
-      format: defaultFormat
-      length: [16]
-      cvcLength: [3]
-      luhn: true
+    type: 'jcb'
+    pattern: /^35/
+    format: defaultFormat
+    length: [16]
+    cvcLength: [3]
+    luhn: true
   }
   {
-      type: 'laser'
-      pattern: /^(6706|6771|6709)/
-      format: defaultFormat
-      length: [16..19]
-      cvcLength: [3]
-      luhn: true
+    type: 'laser'
+    pattern: /^(6706|6771|6709)/
+    format: defaultFormat
+    length: [16..19]
+    cvcLength: [3]
+    luhn: true
   }
   {
-      type: 'maestro'
-      pattern: /^(5018|5020|5038|6304|6703|6708|6759|676[1-3])/
-      format: defaultFormat
-      length: [12..19]
-      cvcLength: [3]
-      luhn: true
+    type: 'maestro'
+    pattern: /^(5018|5020|5038|6304|6703|6708|6759|676[1-3])/
+    format: defaultFormat
+    length: [12..19]
+    cvcLength: [3]
+    luhn: true
   }
   {
-      type: 'mastercard'
-      pattern: /^(5[1-5]|677189)|^(222[1-9]|2[3-6]\d{2}|27[0-1]\d|2720)/
-      format: defaultFormat
-      length: [16]
-      cvcLength: [3]
-      luhn: true
+    type: 'mastercard'
+    pattern: /^(5[1-5]|677189)|^(222[1-9]|2[3-6]\d{2}|27[0-1]\d|2720)/
+    format: defaultFormat
+    length: [16]
+    cvcLength: [3]
+    luhn: true
   }
   {
-      type: 'unionpay'
-      pattern: /^62/
-      format: defaultFormat
-      length: [16..19]
-      cvcLength: [3]
-      luhn: false
+    type: 'unionpay'
+    pattern: /^62/
+    format: defaultFormat
+    length: [16..19]
+    cvcLength: [3]
+    luhn: false
   }
   {
-      type: 'visaelectron',
-      pattern: /^4(026|17500|405|508|844|91[37])/,
-      format: defaultFormat,
-      length: [16],
-      cvcLength: [3],
-      luhn: true
+    type: 'visaelectron',
+    pattern: /^4(026|17500|405|508|844|91[37])/,
+    format: defaultFormat,
+    length: [16],
+    cvcLength: [3],
+    luhn: true
   }
   {
-      type: 'elo'
-      pattern: /^(4011(78|79)|43(1274|8935)|45(1416|7393|763(1|2))|50(4175|6699|67[0-7][0-9]|9000)|627780|63(6297|6368)|650(03([^4])|04([0-9])|05(0|1)|4(0[5-9]|3[0-9]|8[5-9]|9[0-9])|5([0-2][0-9]|3[0-8])|9([2-6][0-9]|7[0-8])|541|700|720|901)|651652|655000|655021)/,
-      format: defaultFormat
-      length: [16]
-      cvcLength: [3]
-      luhn: true
+    type: 'elo'
+    pattern: /^(4011(78|79)|43(1274|8935)|45(1416|7393|763(1|2))|50(4175|6699|67[0-7][0-9]|9000)|627780|63(6297|6368)|650(03([^4])|04([0-9])|05(0|1)|4(0[5-9]|3[0-9]|8[5-9]|9[0-9])|5([0-2][0-9]|3[0-8])|9([2-6][0-9]|7[0-8])|541|700|720|901)|651652|655000|655021)/,
+    format: defaultFormat
+    length: [16]
+    cvcLength: [3]
+    luhn: true
   }
   {
-      type: 'visa'
-      pattern: /^4/
-      format: defaultFormat
-      length: [13, 16, 19]
-      cvcLength: [3]
-      luhn: true
+    type: 'visa'
+    pattern: /^4/
+    format: defaultFormat
+    length: [13, 16, 19]
+    cvcLength: [3]
+    luhn: true
   }
 ]
 
@@ -132,7 +140,7 @@ luhnCheck = (num) ->
 
 hasTextSelected = (target) ->
   try
-    # If some text is selected
+# If some text is selected
     return true if target.selectionStart? and
       target.selectionStart isnt target.selectionEnd
 
@@ -150,20 +158,20 @@ hasTextSelected = (target) ->
 reFormatCardNumber = (e) ->
   setTimeout =>
     target = e.target
-    value   = QJ.val(target)
-    value   = Payment.fns.formatCardNumber(value)
+    value = QJ.val(target)
+    value = Payment.fns.formatCardNumber(value)
     QJ.val(target, value)
     QJ.trigger(target, 'change')
 
 formatCardNumber = (maxLength) -> (e) ->
-  # Only format if input is a number
+# Only format if input is a number
   digit = String.fromCharCode(e.which)
   return unless /^\d+$/.test(digit)
 
   target = e.target
-  value   = QJ.val(target)
-  card    = cardFromNumber(value + digit)
-  length  = (value.replace(/\D/g, '') + digit).length
+  value = QJ.val(target)
+  card = cardFromNumber(value + digit)
+  length = (value.replace(/\D/g, '') + digit).length
 
   upperLengths = [16]
   upperLengths = card.length if card
@@ -171,14 +179,14 @@ formatCardNumber = (maxLength) -> (e) ->
 
   # Return if an upper length has been reached
   for upperLength, i in upperLengths
-    continue if length >= upperLength and upperLengths[i+1]
+    continue if length >= upperLength and upperLengths[i + 1]
     return if length >= upperLength
 
   # Return if focus isn't at the end of the text
   return if hasTextSelected(target)
 
   if card && card.type is 'amex'
-    # Amex cards are formatted differently
+# Amex cards are formatted differently
     re = /^(\d{4}|\d{4}\s\d{6})$/
   else
     re = /(?:^|\s)(\d{4})$/
@@ -191,7 +199,7 @@ formatCardNumber = (maxLength) -> (e) ->
 
 formatBackCardNumber = (e) ->
   target = e.target
-  value   = QJ.val(target)
+  value = QJ.val(target)
 
   return if e.meta
 
@@ -214,12 +222,12 @@ formatBackCardNumber = (e) ->
 # Format Expiry
 
 formatExpiry = (e) ->
-  # Only format if input is a number
+# Only format if input is a number
   digit = String.fromCharCode(e.which)
   return unless /^\d+$/.test(digit)
 
   target = e.target
-  val     = QJ.val(target) + digit
+  val = QJ.val(target) + digit
 
   if /^\d$/.test(val) and val not in ['0', '1']
     e.preventDefault()
@@ -236,7 +244,7 @@ formatMonthExpiry = (e) ->
   return unless /^\d+$/.test(digit)
 
   target = e.target
-  val     = QJ.val(target) + digit
+  val = QJ.val(target) + digit
 
   if /^\d$/.test(val) and val not in ['0', '1']
     e.preventDefault()
@@ -253,7 +261,7 @@ formatForwardExpiry = (e) ->
   return unless /^\d+$/.test(digit)
 
   target = e.target
-  val     = QJ.val(target)
+  val = QJ.val(target)
 
   if /^\d\d$/.test(val)
     QJ.val(target, "#{val} / ")
@@ -264,18 +272,18 @@ formatForwardSlash = (e) ->
   return unless slash is '/'
 
   target = e.target
-  val     = QJ.val(target)
+  val = QJ.val(target)
 
   if /^\d$/.test(val) and val isnt '0'
     QJ.val(target, "0#{val} / ")
     QJ.trigger(target, 'change')
 
 formatBackExpiry = (e) ->
-  # If shift+backspace is pressed
+# If shift+backspace is pressed
   return if e.metaKey
 
   target = e.target
-  value   = QJ.val(target)
+  value = QJ.val(target)
 
   # Return unless backspacing
   return unless e.which is 8
@@ -296,7 +304,7 @@ formatBackExpiry = (e) ->
 #  Restrictions
 
 restrictNumeric = (e) ->
-  # Key event is for a browser shortcut
+# Key event is for a browser shortcut
   return true if e.metaKey or e.ctrlKey
 
   # If keycode is a space
@@ -315,14 +323,14 @@ restrictNumeric = (e) ->
 
 restrictCardNumber = (maxLength) -> (e) ->
   target = e.target
-  digit   = String.fromCharCode(e.which)
+  digit = String.fromCharCode(e.which)
   return unless /^\d+$/.test(digit)
 
   return if hasTextSelected(target)
 
   # Restrict number of digits
   value = (QJ.val(target) + digit).replace(/\D/g, '')
-  card  = cardFromNumber(value)
+  card = cardFromNumber(value)
 
   length = 16
   length = card.length[card.length.length - 1] if card
@@ -332,7 +340,7 @@ restrictCardNumber = (maxLength) -> (e) ->
 
 restrictExpiry = (e, length) ->
   target = e.target
-  digit   = String.fromCharCode(e.which)
+  digit = String.fromCharCode(e.which)
   return unless /^\d+$/.test(digit)
 
   return if hasTextSelected(target)
@@ -353,17 +361,17 @@ restrictYearExpiry = (e) ->
 
 restrictCVC = (e) ->
   target = e.target
-  digit   = String.fromCharCode(e.which)
+  digit = String.fromCharCode(e.which)
   return unless /^\d+$/.test(digit)
 
   return if hasTextSelected(target)
 
-  val     = QJ.val(target) + digit
+  val = QJ.val(target) + digit
   return e.preventDefault() unless val.length <= 4
 
 setCardType = (e) ->
-  target  = e.target
-  val      = QJ.val(target)
+  target = e.target
+  val = QJ.val(target)
   cardType = Payment.fns.cardType(val) or 'unknown'
 
   unless QJ.hasClass(target, cardType)
@@ -388,10 +396,10 @@ class Payment
       if year?.length is 2 and /^\d+$/.test(year)
         prefix = (new Date).getFullYear()
         prefix = prefix.toString()[0..1]
-        year   = prefix + year
+        year = prefix + year
 
       month = parseInt(month, 10)
-      year  = parseInt(year, 10)
+      year = parseInt(year, 10)
 
       month: month, year: year
     validateCardNumber: (num) ->
@@ -404,7 +412,7 @@ class Payment
       num.length in card.length and
         (card.luhn is false or luhnCheck(num))
     validateCardExpiry: (month, year) ->
-      # Allow passing an object
+# Allow passing an object
       if typeof month is 'object' and 'month' of month
         {month, year} = month
       else if typeof month is 'string' and '/' in month
@@ -413,7 +421,7 @@ class Payment
       return false unless month and year
 
       month = QJ.trim(month)
-      year  = QJ.trim(year)
+      year = QJ.trim(year)
 
       return false unless /^\d+$/.test(month)
       return false unless /^\d+$/.test(year)
@@ -425,9 +433,9 @@ class Payment
       if year.length is 2
         prefix = (new Date).getFullYear()
         prefix = prefix.toString()[0..1]
-        year   = prefix + year
+        year = prefix + year
 
-      expiry      = new Date(year, month)
+      expiry = new Date(year, month)
       currentTime = new Date
 
       # Months start from 0 in JavaScript
@@ -444,10 +452,10 @@ class Payment
       return false unless /^\d+$/.test(cvc)
 
       if type and cardFromType(type)
-        # Check against a explicit card type
+# Check against a explicit card type
         cvc.length in cardFromType(type)?.cvcLength
       else
-        # Check against all types
+# Check against all types
         cvc.length >= 3 and cvc.length <= 4
     cardType: (num) ->
       return null unless num
